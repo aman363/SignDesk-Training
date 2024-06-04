@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dragstart(){
+            console.log("drag started");
+            document.addEventListener("dragstart",function(e){
+                console.log(e);
+                e=e||window.event;
+                var dragX=e.pageX,dragY=e.pageY;
+                console.log("Drag started at "+"X:"+dragX+"Y:"+dragY);
+            });
+        }
+        function dragend(){
+            console.log("drag stop");
+            document.addEventListener("dragend",function(e){
+                console.log(e);
+                e=e||window.event;
+                var dragX=e.pageX,dragY=e.pageY;
+                console.log("Drag stop at "+"X:"+dragX+"Y:"+dragY);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div draggable="true" ondragstart="dragstart()" ondragend="dragend()">Div1</div>
+</body>
+</html>

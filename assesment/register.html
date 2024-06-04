@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="banner" style="top:0px; left: 0px; width: 1200px; height:100px; position:absolute; background-color: burlywood;">
+    <div id="banner" style="top:0px; left: 0px; width: 1200px; height:100px; position:absolute; background-color:#B2456E;">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutus.html">About Us</a></li>
@@ -17,10 +18,70 @@
             <li><a href="contacts.html">Contacts</a></li>
         </ul>
     </div>
-    <div id="content" style="top: 100px; left:0px; width: 1200px; height: 500px; position:absolute; background-color: bisque;">
-        Register page
+    <div id="content" style="top: 100px; left:0px; width: 1200px; height: 500px; position:absolute; background-color: #FBEAE7;">
+        <form action="register_action.html" method="post" style="margin: 20px;">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <ol>
+                    <li>
+                        <label for="first_name">First Name</label>
+                        <input type="text" name="first_name" id="first_name" required>
+                    </li>
+                    <li>
+                        <label for="last_name">Last Name</label>
+                        <input type="text" name="last_name" id="last_name" required>
+                    </li>
+                    <li>
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" name="dob" id="dob" required>
+                    </li>
+                    <li>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                    </li>
+                    <li>
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" required>
+                    </li>
+                    <li>
+                        <label for="confirm_password">Confirm Password</label>
+                        <input type="password" name="confirm_password" id="confirm_password" required>
+                    </li>
+                </ol>
+            </fieldset>
+            <fieldset>
+                <legend>Address</legend>
+                <ol>
+                    <li>
+                        <label for="home_no">Home No</label>
+                        <input type="text" name="home_no" id="home_no" required>
+                    </li>
+                    <li>
+                        <label for="street_name">Street Name</label>
+                        <input type="text" name="street_name" id="street_name" required>
+                    </li>
+                    <li>
+                        <label for="city">City</label>
+                        <input type="text" name="city" id="city" required>
+                    </li>
+                    <li>
+                        <label for="state">State</label>
+                        <input type="text" name="state" id="state" required>
+                    </li>
+                    <li>
+                        <label for="country">Country</label>
+                        <input type="text" name="country" id="country" required>
+                    </li>
+                    <li>
+                        <label for="pincode">Pincode</label>
+                        <input type="text" name="pincode" id="pincode" required>
+                    </li>
+                </ol>
+            </fieldset>
+            <button type="submit">Register</button>
+        </form>
     </div>
-    <div id="footer" style="top: 600px; left:0px; width: 1200px; height: 700px; position:absolute; background-color: grey;">
+    <div id="footer" style="top: 600px; left:0px; width: 1200px; height: 700px; position:absolute; background-color: #552619;">
         Footer here
     </div>
 </body>

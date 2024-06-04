@@ -4,9 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function verify() {
+        // Verification logic for the name field
+        var uName = document.getElementById('name').value;
+        var uPwd = document.getElementById('password').value;
+        console.log(uName,uPwd);
+        
+        if(uName=="John" && uPwd=="john@123"){
+            localStorage.setItem("username",uName)
+            localStorage.setItem("role","Admin")
+        }
+        else{
+            localStorage.setItem("username",uName)
+            localStorage.setItem("role","User")
+        }
+    }
+    </script>
 </head>
 <body>
-    <div id="banner" style="top:0px; left: 0px; width: 1200px; height:100px; position:absolute; background-color: burlywood;">
+    <div id="banner" style="top:0px; left: 0px; width: 1200px; height:100px; position:absolute; background-color:#B2456E;">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutus.html">About Us</a></li>
@@ -17,10 +35,25 @@
             <li><a href="contacts.html">Contacts</a></li>
         </ul>
     </div>
-    <div id="content" style="top: 100px; left:0px; width: 1200px; height: 500px; position:absolute; background-color: bisque;">
-        login page
+    <div id="content" style="top: 100px; left:0px; width: 1200px; height: 500px; position:absolute; background-color: #FBEAE7;">
+        <form>
+            <fieldset>
+            <legend>Login Information</legend>
+            <ol>
+                <li>
+                    <label for="name">name</label>
+                    <input type="text" name="name" id="name">
+                </li>
+                <li>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password">
+                </li>
+            </ol>
+            </fieldset>
+            <button onclick= "verify()">Login</button>
+        </form>
     </div>
-    <div id="footer" style="top: 600px; left:0px; width: 1200px; height: 700px; position:absolute; background-color: grey;">
+    <div id="footer" style="top: 600px; left:0px; width: 1200px; height: 700px; position:absolute; background-color: #552619;">
         Footer here
     </div>
 </body>
