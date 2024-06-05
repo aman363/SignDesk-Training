@@ -1,0 +1,127 @@
+
+
+header {
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+main > section {
+    flex: 3;
+    margin-right: 20px;
+}
+
+main > aside {
+    flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+section p {
+    margin-bottom: 15px;
+}
+
+section aside {
+    float: right;
+    width: 200px;
+    padding: 10px;
+    margin-left: 15px;
+    box-sizing: border-box;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+
+footer nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+
+@media only screen and (max-width: 480px) {
+    body {
+        width: 480px;
+        padding: 10px;
+        background-color: yellow;
+    }
+
+    /* header {
+        text-align: left;
+        padding: 10px;
+    }
+
+    header h2 {
+        font-size: 1.5em;
+    }
+
+    header nav ul li a {
+        font-size: 1em;
+    } */
+
+    /* main {
+        display: block;
+        padding: 10px;
+    }
+
+    main > section {
+        margin-right: 0;
+        width: 100%;
+    }
+
+    main > section > aside {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    main > aside {
+        width: 100%;
+        margin-top: 20px;
+        float: none;
+    } */
+
+    section p, article p {
+        margin-bottom: 15px;
+        font-size: 1em;
+    }
+
+    footer {
+        text-align: left;
+        padding: 10px;
+    }
+}

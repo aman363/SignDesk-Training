@@ -1,0 +1,38 @@
+.navbar-nav .nav-link {
+    color: #000 !important; 
+}
+.navbar .btn:hover {
+    background-color:blue;
+}
+
+.swiper-theme-container {
+    width: 1000px !important;
+    position: relative;
+  }
+  
+
+  .swiper {
+    width: 1000px !important;
+    height: 250px !important;
+  }
+
+  
+  .swiper-wrapper {
+    display: flex;
+    
+  }
+  
+  .swiper-slide {
+    width: 400px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.footer{
+    background-color: aqua;
+}
+
+.test {
+    display: flex;
+}

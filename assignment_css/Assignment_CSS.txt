@@ -1,0 +1,5 @@
+1)Menu Change font color
+2)Hover: change to blue
+3)Change review tabs alignment
+4)Change footer color
+5)Organize remote team fast & easily. in aboutus page: add a block of text with an image on the right end
