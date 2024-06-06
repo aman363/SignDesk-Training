@@ -16,4 +16,7 @@
 #### fonts
 #### font face
 #### attribute selector (=, ~=,^=,*=, $=)
+## Day 4
+#### Bootstrap
+#### JS concepts
 
