@@ -5,59 +5,192 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <script>
+        // alert("Hello")
+        // msg("James")
+        // function msg(nm){
+        //     console.log("hello from assessments...Welcome "+nm)
+        // }
+
+        var drawLogo = function() {
+            var canvas = document.getElementById("logo");
+            var context = canvas.getContext("2d");
+
+            context.fillStyle = "#552619"; // RRGGBB // 0,1,2,........,9,A,B,C,D,E,F
+            context.strokeStyle = "#552619";
+
+            context.lineWidth = 2; 
+            context.beginPath();
+            context.moveTo(0, 40); 
+            context.lineTo(30, 0);
+            context.lineTo(60, 40 );
+            context.lineTo(285, 40 );
+
+            context.fill();   
+            context.closePath();
+
+            context.font = "italic 40px 'Arial'";
+            context.fillStyle = "#552619";
+            context.fillText("Assessment", 60, 36);
+
+            context.save();
+            context.translate(20,20);
+            context.fillRect(0,0,20,20); 
+
+            context.fillStyle = "#B2456E";
+            context.strokeStyle = "#B2456E";
+
+            context.lineWidth = 2;
+            context.beginPath();
+            context.moveTo(0, 20); 
+            context.lineTo(10, 0);
+            context.lineTo(20, 20 );
+            context.lineTo(0, 20 );
+
+            context.fill();
+            context.closePath();
+            context.restore();
+        };
+
+        window.onload = function() {
+            var canvas = document.getElementById("logo");
+            if (canvas.getContext) {
+                drawLogo();
+            }
+        };
+    </script>
 </head>
 <body>
-    <div id="banner" style="top:0px; left: 0px; width: 1200px; height:100px; position:absolute; background-color:#B2456E;">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutus.html">About Us</a></li>
-            <li><a href="Assessments.html">Assessments</a></li>
-            <li><a href="admin.html">Admin</a></li>
-            <li><a href="login.html">Login</a></li>
-            <li><a href="register.html">Register</a></li>
-            <li><a href="contacts.html">Contacts</a></li>
-        </ul>
+    <div class="container-fluid">
+        <div class="row" id="banner">
+            <!-- <canvas id="logo" width="300" height="100px" style="vertical-align: middle;"></canvas> -->
+            <!-- <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="aboutus.html">About Us</a></li>
+                <li><a href="Assessments.html">Assessments</a></li>
+                <li><a href="admin.html">Admin</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
+            </ul> -->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Navbar</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html">About Us</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="Assessments.html">Assessments</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="admin.html">Admin</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="contacts.html">Contact Us</a>
+                      </li>
+                      <li>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                            Login
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                
+              </form>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal_register" data-bs-target="#staticBackdrop">
+                Register
+            </button>
+        </div>
+      </div>
     </div>
-    <div id="content" style="top: 100px; left:0px; width: 1200px; height: 500px; position:absolute; background-color: #FBEAE7;">
-        
-        <table>
-            <thead>
-                <th>Sr. No.</th><th>Name</th><th>Image</th><th>Action</th><th>Action</th>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Ruby on Rail</td>
-                    <td><img src="Images/ror.png" alt="" height="100px" width="100px"></td>
-                    <td><button>View details</button></td>
-                    <td><button>Add to cart</button></td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Python</td>
-                    <td><img src="Images/python.jpeg" alt="" height="100px" width="100px"></td>
-                    <td><button>View details</button></td>
-                    <td><button>Add to cart</button></td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Angular</td>
-                    <td><img src="Images/angular.png" alt="" height="100px" width="100px"></td>
-                    <td><button>View details</button></td>
-                    <td><button>Add to cart</button></td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Node JS</td>
-                    <td><img src="Images/nodejs.png" alt="" height="100px" width="100px"></td>
-                    <td><button>View details</button></td>
-                    <td><button>Add to cart</button></td>
-                </tr>
-            </tbody>
-        </table>
+  </div>
+  
+        </div>
+        <div class="row" id="content">
+            <div class="row">
+                <table>
+                    <thead>
+                        <th>Sr. No.</th><th>Name</th><th>Image</th><th>Action</th><th>Action</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ruby on Rail</td>
+                            <td><img src="Images/ror.png" alt="" height="100px" width="100px"></td>
+                            <td><button>View details</button></td>
+                            <td><button>Add to cart</button></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Python</td>
+                            <td><img src="Images/python.jpeg" alt="" height="100px" width="100px"></td>
+                            <td><button>View details</button></td>
+                            <td><button>Add to cart</button></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Angular</td>
+                            <td><img src="Images/angular.png" alt="" height="100px" width="100px"></td>
+                            <td><button>View details</button></td>
+                            <td><button>Add to cart</button></td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Node JS</td>
+                            <td><img src="Images/nodejs.png" alt="" height="100px" width="100px"></td>
+                            <td><button>View details</button></td>
+                            <td><button>Add to cart</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row" id="footer">
+            Footer here
+        </div>
     </div>
-    <div id="footer" style="top: 600px; left:0px; width: 1200px; height: 700px; position:absolute; background-color: #552619;">
-        Footer here
-    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

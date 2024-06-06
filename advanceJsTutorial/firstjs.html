@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentence Word Display</title>
+</head>
+<body>
+    <script>
+        function capitalizeFirstLetter(word) {
+            return word.charAt(0).toUpperCase() + word.slice(1);
+        }
+        const sentence = prompt("Please enter a sentence:");
+        if (sentence) {
+            const words = sentence.split(' ');
+
+            words.forEach(word => console.log(capitalizeFirstLetter(word)));
+        } else {
+            console.log("No input provided.");
+        }
+    </script>
+</body>
+</html>
