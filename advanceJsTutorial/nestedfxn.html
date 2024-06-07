@@ -5,16 +5,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    
 </head>
-<body>
-    <div>
+<body id="body_ele">
+    <!-- <button>Click Me</button> -->
+    <!-- <div class="blue">
         <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo mollitia impedit nulla quidem voluptatibus hic aliquam non sapiente pariatur, unde eius cum fuga ut cumque quasi dicta fugiat similique obcaecati.</h2>
-    </div>
-    <div>
+    </div> -->
+    <div id="div_id" name="div_name">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos exercitationem optio reiciendis, rem alias doloremque, dicta minima vero ipsam corrupti et accusantium sapiente eum. Non facilis libero consectetur error magni!</p>
     </div>
-    <h1>hello</h1>
-    
-    <script src="./javas.js" type="module"></script>    
+    <!-- <h1>hello</h1> -->
+    <!-- <script>
+        let button=document.querySelector("button");
+        button.addEventListener("mousedown",event=>{
+            if(event.button==0){
+                console.log("Left Button")
+            }
+            else if(event.button==1){
+                console.log("Middle Button")
+            }
+            else if(event.button==2){
+                console.log("Right Button")
+            }
+        })
+    </script> -->
+    <script>
+
+    function DivStyle(he,wi,co){
+        this.he=he;
+        this.wi=wi;
+        this.co=co;
+    }
+
+    let RoundedDivStyle = (function(parent){
+    RoundedDivStyle.prototype = new DivStyle() ; 
+    RoundedDivStyle.prototype.constructor = RoundedDivStyle ; 
+    function RoundedDivStyle(height , width , color , radius){
+        parent.call(this , height, width , color) ; 
+        this.radius = radius ; 
+    }
+    return RoundedDivStyle ; 
+    })(DivStyle)
+
+    function createDivisions() {
+    var numberOfDivs = parseInt(prompt("Enter the number of divisions"));
+
+    var divArray = [];
+
+    for (var i = 0; i < numberOfDivs; i++) {
+        var div = createDiv();
+        var style = {
+            he: parseInt(div.style.height),
+            wi: parseInt(div.style.width)
+        };
+        divArray.push(style);
+    }
+
+    var totalArea = calculateTotalArea(divArray);
+
+    console.log("Total area of all divisions: " + totalArea + " square pixels");
+}
+
+function calculateTotalArea(divArray) {
+    var totalArea = 0;
+    for (var i = 0; i < divArray.length; i++) {
+        var ds = divArray[i];
+        totalArea += ds.he * ds.wi;
+    }
+    return totalArea;
+}
+
+
+function createDiv(){
+    var div=document.createElement('div');
+    div.innerHTML="I am a division";
+    div.setAttribute("id","div1");
+    var he=parseInt(prompt("Enter the height"));
+    var wi=parseInt(prompt("Enter the width"));
+    var co=prompt("Enter the color");
+    // var ds=new DivStyle(he,wi,co);
+    let radius = prompt("Enter radius") ; 
+    let divProperties = new RoundedDivStyle(he ,wi, co , radius) ; 
+    changeDivStyle(divProperties , div) ; 
+    // changeDivStyle(ds,div);
+    // rounded(div);
+    document.body.appendChild(div);
+    return div;
+}
+
+// function rounded(div){
+//     div.style.cssText="border-radius:25px";
+// }
+
+    function changeDivStyle (ds,div){
+        div.style.cssText="height:"+ds.he+"px;width:"+ds.wi+"px;background-color:"+ds.co;
+        div.style.borderRadius = ds.radius + "px"; 
+    }
+    function calculateArea(ds){
+        alert(ds.he*ds.wi);
+    }
+    createDivisions();
+//createDiv();
+    </script>
+    <script src="./demodiv.js" type="module"></script>    
 </body>
 </html>

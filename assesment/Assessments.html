@@ -103,88 +103,200 @@
                       </li>
                       <li>
                         <!-- Button trigger modal -->
-                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                            Login
-                        </button>
+                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Login</button>
                       </li>
                     </ul>
                   </div>
                 </div>
               </nav>
             <!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Login</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email address</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <!-- <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel">Modal 1</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div> -->
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Email address</label>
+                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            </div>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Password</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>          
+                          </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary">Submit</button>
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Register</button>
+                    </div>
+                  </div>
                 </div>
-                <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Password</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Register</h1>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              </div>
+                              <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                              </div>
+                            <div class="mb-3">
+                              <label for="exampleInputEmail1" class="form-label">Dob</label>
+                              <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                              <label for="exampleInputPassword1" class="form-label">Password</label>
+                              <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                              </div>         
+                          </form>
+                    </div>
+                    <div class="modal-footer">
+                      <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to Login</button>
+                    </div>
+                  </div>
                 </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
-                
-              </form>
-        </div>
-        <div class="modal-footer">
-            <button type="submit" class="btn btn-primary">Submit</button>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal_register" data-bs-target="#staticBackdrop">
-                Register
-            </button>
-        </div>
-      </div>
-    </div>
-  </div>
+              </div>
+              
   
         </div>
         <div class="row" id="content">
             <div class="row">
-                <table>
-                    <thead>
-                        <th>Sr. No.</th><th>Name</th><th>Image</th><th>Action</th><th>Action</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Ruby on Rail</td>
-                            <td><img src="Images/ror.png" alt="" height="100px" width="100px"></td>
-                            <td><button>View details</button></td>
-                            <td><button>Add to cart</button></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Python</td>
-                            <td><img src="Images/python.jpeg" alt="" height="100px" width="100px"></td>
-                            <td><button>View details</button></td>
-                            <td><button>Add to cart</button></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Angular</td>
-                            <td><img src="Images/angular.png" alt="" height="100px" width="100px"></td>
-                            <td><button>View details</button></td>
-                            <td><button>Add to cart</button></td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Node JS</td>
-                            <td><img src="Images/nodejs.png" alt="" height="100px" width="100px"></td>
-                            <td><button>View details</button></td>
-                            <td><button>Add to cart</button></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                  </nav>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                    <div class="col">
+                        <div class="card" >
+                            <img src="Images/angular.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Angular Assessment</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" >
+                            <img src="Images/nodejs.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Node JS Assessment</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" >
+                            <img src="Images/python.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Python Assessment</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card" >
+                            <img src="Images/angular.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Angular Assessment</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" >
+                            <img src="Images/nodejs.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Node JS Assessment</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" >
+                            <img src="Images/python.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Python Assessment</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="card" >
+                            <img src="Images/angular.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Angular Assessment</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" >
+                            <img src="Images/nodejs.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Node JS Assessment</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                            </div>
+                          </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" >
+                            <img src="Images/python.jpeg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title">Python Assessment</h5>
+                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                </div>
             </div>
         </div>
         <div class="row" id="footer">
