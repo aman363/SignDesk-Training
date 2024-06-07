@@ -19,4 +19,11 @@
 ## Day 4
 #### Bootstrap
 #### JS concepts
+## Day 5
+#### more JS concepts
+#### events
+#### event propagation and event bubbling
+#### OOPs in JS
+
+
 
