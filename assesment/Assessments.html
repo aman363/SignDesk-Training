@@ -65,24 +65,16 @@
 <body>
     <div class="container-fluid">
         <div class="row" id="banner">
-            <!-- <canvas id="logo" width="300" height="100px" style="vertical-align: middle;"></canvas> -->
-            <!-- <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="Assessments.html">Assessments</a></li>
-                <li><a href="admin.html">Admin</a></li>
-                <li><a href="login.html">Login</a></li>
-                <li><a href="register.html">Register</a></li>
-                <li><a href="contacts.html">Contacts</a></li>
-            </ul> -->
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Navbar</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNavDropdown">
                     <ul class="navbar-nav">
+                        <li class="nav item">
+                            <img src="./Images/logo.png" class="navbar-logo">
+                          </li>
                       <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="#"></a>
                       </li>
@@ -101,10 +93,11 @@
                       <li class="nav-item">
                         <a class="nav-link" href="contacts.html">Contact Us</a>
                       </li>
-                      <li>
-                        <!-- Button trigger modal -->
-                        <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Login</button>
-                      </li>
+                      <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Login</button>
+                        </li>
+                    </ul>
                     </ul>
                   </div>
                 </div>
@@ -118,24 +111,26 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div> -->
                     <div class="modal-body">
-                        <form>
+                        <form id="loginForm" novalidate>
                             <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Email address</label>
-                              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                <div class="invalid-feedback">
+                                    Please enter your email address.
+                                </div>
                             </div>
                             <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label">Password</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1" required>
+                                <div class="invalid-feedback">
+                                    Please enter your password.
+                                </div>
                             </div>
-                            <div class="mb-3 form-check">
-                              <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                              <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                            </div>          
-                          </form>
+                        </form>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-primary">Submit</button>
+                        <button class="btn btn-primary" onclick="validateLoginForm()">Submit</button>
                       <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Register</button>
                     </div>
                   </div>
@@ -149,33 +144,103 @@
                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form id="registerForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">First Name</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                
-                              </div>
-                              <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Last Name</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                              </div>
-                              <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                              </div>
-                            <div class="mb-3">
-                              <label for="exampleInputEmail1" class="form-label">Dob</label>
-                              <input type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label for="firstName" class="form-label">First Name</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                <div class="invalid-feedback">
+                                    Please enter your first name.
+                                </div>
                             </div>
                             <div class="mb-3">
-                              <label for="exampleInputPassword1" class="form-label">Password</label>
-                              <input type="password" class="form-control" id="exampleInputPassword1">
+                                <label for="lastName" class="form-label">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                <div class="invalid-feedback">
+                                    Please enter your last name.
+                                </div>
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
-                              </div>         
-                          </form>
+                                <label for="email" class="form-label">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="dob" class="form-label">Date of Birth</label>
+                                <input type="date" class="form-control" id="dob" name="dob" required>
+                                <div class="invalid-feedback">
+                                    Please enter your date of birth.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                                <div class="invalid-feedback">
+                                    Please enter a password.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required>
+                                <div class="invalid-feedback">
+                                    Please confirm your password.
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-md-6">
+                            <!-- Address Fieldset -->
+                            <fieldset>
+                                <div class="mb-3">
+                                    <label for="homeNo" class="form-label">Home No</label>
+                                    <input type="text" class="form-control" id="homeNo" name="homeNo" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your home number.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="streetName" class="form-label">Street Name</label>
+                                    <input type="text" class="form-control" id="streetName" name="streetName" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your street name.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="city" name="city" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your city.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="state" class="form-label">State</label>
+                                    <input type="text" class="form-control" id="state" name="state" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your state.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="country" class="form-label">Country</label>
+                                    <input type="text" class="form-control" id="country" name="country" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your country.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="pincode" class="form-label">Pincode</label>
+                                    <input type="text" class="form-control" id="pincode" name="pincode" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your pincode.
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                        </div>
+                            <button type="button" class="btn btn-primary" onclick="validateRegisterForm()">Register</button>
+                        </form>
                     </div>
                     <div class="modal-footer">
                       <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Back to Login</button>
@@ -199,15 +264,18 @@
                   </nav>
             </div>
             <div class="row">
-                <div class="col-md-12">
-                    <div class="row">
+                <div class="col-md-12" id="challenge">
+                    <div class="row" >
                     <div class="col">
                         <div class="card" >
                             <img src="Images/angular.png" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Angular Assessment</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                              <div class="d-flex justify-content-between align-items-center">
+                                <a href="Assessments.html" class="btn btn-primary">View More</a>
+                                <button class="btn btn-success">Add to Cart</button>
+                            </div>
                             </div>
                           </div>
                     </div>
@@ -217,17 +285,23 @@
                             <div class="card-body">
                               <h5 class="card-title">Node JS Assessment</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                              <div class="d-flex justify-content-between align-items-center">
+                                <a href="Assessments.html" class="btn btn-primary">View More</a>
+                                <button class="btn btn-success">Add to Cart</button>
+                            </div>
                             </div>
                           </div>
                     </div>
                     <div class="col">
                         <div class="card" >
-                            <img src="Images/python.jpeg" class="card-img-top" alt="...">
+                            <img src="Images/python.webp" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Python Assessment</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                              <div class="d-flex justify-content-between align-items-center">
+                                <a href="Assessments.html" class="btn btn-primary">View More</a>
+                                <button class="btn btn-success">Add to Cart</button>
+                            </div>
                             </div>
                           </div>
                     </div>
@@ -239,7 +313,10 @@
                             <div class="card-body">
                               <h5 class="card-title">Angular Assessment</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                              <div class="d-flex justify-content-between align-items-center">
+                                <a href="Assessments.html" class="btn btn-primary">View More</a>
+                                <button class="btn btn-success">Add to Cart</button>
+                            </div>
                             </div>
                           </div>
                     </div>
@@ -249,17 +326,23 @@
                             <div class="card-body">
                               <h5 class="card-title">Node JS Assessment</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                              <div class="d-flex justify-content-between align-items-center">
+                                <a href="Assessments.html" class="btn btn-primary">View More</a>
+                                <button class="btn btn-success">Add to Cart</button>
+                            </div>
                             </div>
                           </div>
                     </div>
                     <div class="col">
                         <div class="card" >
-                            <img src="Images/python.jpeg" class="card-img-top" alt="...">
+                            <img src="Images/python.webp" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Python Assessment</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                              <div class="d-flex justify-content-between align-items-center">
+                                <a href="Assessments.html" class="btn btn-primary">View More</a>
+                                <button class="btn btn-success">Add to Cart</button>
+                            </div>
                             </div>
                           </div>
                     </div>
@@ -271,7 +354,10 @@
                             <div class="card-body">
                               <h5 class="card-title">Angular Assessment</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                              <div class="d-flex justify-content-between align-items-center">
+                                <a href="Assessments.html" class="btn btn-primary">View More</a>
+                                <button class="btn btn-success">Add to Cart</button>
+                            </div>
                             </div>
                           </div>
                     </div>
@@ -281,17 +367,23 @@
                             <div class="card-body">
                               <h5 class="card-title">Node JS Assessment</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                              <div class="d-flex justify-content-between align-items-center">
+                                <a href="Assessments.html" class="btn btn-primary">View More</a>
+                                <button class="btn btn-success">Add to Cart</button>
+                            </div>
                             </div>
                           </div>
                     </div>
                     <div class="col">
                         <div class="card" >
-                            <img src="Images/python.jpeg" class="card-img-top" alt="...">
+                            <img src="Images/python.webp" class="card-img-top" alt="...">
                             <div class="card-body">
                               <h5 class="card-title">Python Assessment</h5>
                               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                              <a href="Assessments.html" class="btn btn-primary">View More</a>
+                              <div class="d-flex justify-content-between align-items-center">
+                                <a href="Assessments.html" class="btn btn-primary">View More</a>
+                                <button class="btn btn-success">Add to Cart</button>
+                            </div>
                             </div>
                           </div>
                     </div>
@@ -300,9 +392,26 @@
             </div>
         </div>
         <div class="row" id="footer">
-            Footer here
+            <footer class="text-center text-white">
+                <div class="container pt-4">
+                  <section class="mb-4" >
+                    <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button" data-mdb-ripple-color="dark"><i class="fab fa-facebook-f" style="color: white !important;"></i></a>
+                    <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button" data-mdb-ripple-color="dark"><i class="fab fa-twitter" style="color: white !important;"></i></a>
+                    <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button" data-mdb-ripple-color="dark"><i class="fab fa-google" style="color: white !important;"></i></a>
+                    <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button" data-mdb-ripple-color="dark"><i class="fab fa-instagram" style="color: white !important;"></i></a>
+                    <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button" data-mdb-ripple-color="dark"><i class="fab fa-linkedin" style="color: white !important;"></i></a>
+                    <a data-mdb-ripple-init class="btn btn-link btn-floating btn-lg text-dark m-1" href="#" role="button" data-mdb-ripple-color="dark"><i class="fab fa-github" style="color: white !important;"></i></a>
+                  </section>
+                </div>
+                <div class="text-center text-dark p-3" style="color:white !important;  background-color: rgb(82, 23, 23);" >
+                  © 2024 Copyright:
+                  <a class="text-dark" href="#" style="color: white  !important;">Assessments</a>
+                </div>
+              </footer>
         </div>
     </div>
+    <script src="./js/scripts.js"></script>
+    <script src="https://kit.fontawesome.com/24444a46f3.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

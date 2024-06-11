@@ -1,80 +1,51 @@
-.navbar-collapse .ms-auto {
-  justify-self: end;
+
+
+.navbar-logo {
+  height: 50px; /* Adjust this value as needed */
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-fluid {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 #banner {
-    display: flex;
-}
-#banner li {
-display: inline-block;
-}
-
-#test {
-  position: absolute;
-  top: 100px;
-}
-
-#test2 {
-  position: absolute;
-  top: 200px;
-}
-
-
-#banner {
-  top:0px; 
-  left: 0px;  
   background-color:#B2456E;
 }
+
+
+#challenge .card {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#challenge .card:hover {
+  transform: scale(0.5);
+  opacity: 0.5;
+}
+
 
 #content {
    left:0px;
     background-color: #FBEAE7;
+    flex: 1;
 }
 
-#content>p {
-  background-color: aqua !important;
-}
-
-#content>p {
-  background-color: red;
-}
 
 #footer {
   left:0px; 
   background-color: #552619;
 }
 
+.navbar-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
 
-
-/* div ~ p {
-  background-color: green;
-} */
-
-
-/* #content h4 {
-  background-color: red;
-} */
-ol{
-    list-style: none;
-    margin: 0;
-    padding :0;
-  }
-  
-  ol li{
-    clear: both;
-    margin: 0 0 10px 0;
-    padding: 0;
-  }
-  
-  label{
-    float: left;
-    width: 150px;
-  }
-  
-  input{ border: 1px solid #333; }
-  
-  input:focus{ background-color: #ffe; }
-  
-  .simpleColorContainer, .simpleColorDisplay{
-    float: left;
-  }

@@ -24,6 +24,15 @@
 #### events
 #### event propagation and event bubbling
 #### OOPs in JS
+## Day 6
+#### model view controller
+#### text interpolation - {{variable name declared in controller can be imported in html}}
+#### routing
+#### button event (click)=""
+## Day 7
+#### key value pair without double qoute is an object
+#### structural directive: ngClass
+#### structural directive:ngFor, ngIf, ngSwitch
 
 
 
