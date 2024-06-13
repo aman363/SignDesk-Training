@@ -33,6 +33,10 @@
 #### key value pair without double qoute is an object
 #### structural directive: ngClass
 #### structural directive:ngFor, ngIf, ngSwitch
-
+## Day 8
+#### Dependency injection
+## Day 9
+#### template vs reactive form
+#### Form builder
 
 
