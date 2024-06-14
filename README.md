@@ -38,5 +38,8 @@
 ## Day 9
 #### template vs reactive form
 #### Form builder
-
-
+## Day 10
+#### observer pattern
+#### add angular validators to forms
+#### custom validators
+#### Regular expression
